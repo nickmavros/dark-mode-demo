@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic Theme Demo</title>
+
+    <!-- Ionic Framework -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Ionic Light/Dark Mode Demo</ion-title>
+          <ion-buttons slot="end">
+            <ion-button fill="clear" id="master-toggle-btn">
+              <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <!-- Master Theme Toggle -->
+      <div class="master-toggle-container">
+        <ion-item>
+          <ion-icon name="sunny-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Global Theme Control</h2>
+            <p>Master switch for both theming methods</p>
+          </ion-label>
+          <ion-toggle id="master-toggle" slot="end"></ion-toggle>
+          <ion-icon name="moon-outline" slot="end"></ion-icon>
+        </ion-item>
+      </div>
+
+      <div class="info-box">
+        <h3>Demo Overview</h3>
+        <p>This demo shows two approaches for implementing light/dark mode theming:</p>
+        <ul>
+          <li>
+            <strong>Method 1:</strong> CSS Custom Properties (Manual approach)
+          </li>
+          <li><strong>Method 2:</strong> Ionic's Built-in Theme System</li>
+        </ul>
+      </div>
+
+      <!-- Comparison Grid -->
+      <div class="comparison-grid">
+        <!-- Method 1: Manual CSS Approach -->
+        <div class="demo-section theme-manual" id="manual-theme">
+          <div class="section-title">
+            Method 1: CSS Custom Properties
+            <span class="status-indicator" id="manual-status">Light</span>
+          </div>
+
+          <div class="manual-card">
+            <h4>Custom CSS Theming</h4>
+            <p>
+              This section uses CSS variables and manual class switching for theme management.
+            </p>
+
+            <div class="toggle-container">
+              <span>Theme Mode:</span>
+              <ion-toggle id="manual-toggle"></ion-toggle>
+              <span>Dark Mode</span>
+            </div>
+
+            <div class="form-group">
+              <label class="manual-label" for="manual-input">Sample Input Field:</label>
+              <input type="text" id="manual-input" class="manual-input" placeholder="Enter some text..."/>
+            </div>
+
+            <button class="manual-button" onclick="handleManualSubmit()">
+              Submit Form
+            </button>
+          </div>
+        </div>
+
+        <!-- Method 2: Ionic Built-in System -->
+        <div class="demo-section" id="ionic-theme">
+          <div class="section-title">
+            Method 2: Ionic Built-in System
+            <span class="status-indicator" id="ionic-status">Light</span>
+          </div>
+
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Ionic Native Theming</ion-card-title>
+              <ion-card-subtitle>
+                This section uses Ionic's built-in color system for switching for theme management.
+              </ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+              <div class="toggle-container">
+                <span>Theme Mode:</span>
+                <ion-toggle id="ionic-toggle"></ion-toggle>
+                <span>Dark Mode</span>
+              </div>
+
+              <ion-item>
+                <ion-label position="stacked">Sample Input Field:</ion-label>
+                <ion-input placeholder="Enter some text..." id="ionic-input"></ion-input>
+              </ion-item>
+
+              <ion-button class="ion-margin-top" expand="block" onclick="handleIonicSubmit()">
+                Submit Form
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+
+      <!-- Technical Details -->
+      <div class="info-box">
+        <h3>Implementation Details</h3>
+        <p>
+          <strong>Storage:</strong>Theme preferences are stored in localStorage as 'theme-preference'
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+          <li>Define all colors as CSS custom properties in :root</li>
+          <li>Use design tokens for consistent color management</li>
+          <li>Implement smooth transitions between themes</li>
+          <li>Store user preference in localStorage</li>
+          <li>Support both manual and framework-native approaches</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+:root {
+  /* Brand Colors */
+  --brand-primary: #3880ff;
+  --brand-secondary: #3dc2ff;
+  --brand-tertiary: #5260ff;
+  --brand-success: #2dd36f;
+  --brand-warning: #ffc409;
+  --brand-danger: #eb445a;
+
+  /* Light Theme Colors */
+  --light-background: #ffffff;
+  --light-surface: #f8f9fa;
+  --light-surface-variant: #e9ecef;
+  --light-text-primary: #212529;
+  --light-text-secondary: #6c757d;
+  --light-border: #dee2e6;
+  --light-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Dark Theme Colors */
+  --dark-background: #0d1117;
+  --dark-surface: #161b22;
+  --dark-surface-variant: #21262d;
+  --dark-text-primary: #f0f6fc;
+  --dark-text-secondary: #8b949e;
+  --dark-border: #30363d;
+  --dark-shadow: rgba(0, 0, 0, 0.3);
+}

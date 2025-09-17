@@ -1,0 +1,62 @@
+/*
+ * ===================
+ * TOKENS FOR METHOD 1
+ * ===================
+*/
+
+/* Default Light Theme */
+.theme-manual {
+  --current-background: var(--light-background);
+  --current-surface: var(--light-surface);
+  --current-surface-variant: var(--light-surface-variant);
+  --current-text-primary: var(--light-text-primary);
+  --current-text-secondary: var(--light-text-secondary);
+  --current-border: var(--light-border);
+  --current-shadow: var(--light-shadow);
+}
+
+/* Dark Theme Override */
+.theme-manual.dark-theme {
+  --current-background: var(--dark-background);
+  --current-surface: var(--dark-surface);
+  --current-surface-variant: var(--dark-surface-variant);
+  --current-text-primary: var(--dark-text-primary);
+  --current-text-secondary: var(--dark-text-secondary);
+  --current-border: var(--dark-border);
+  --current-shadow: var(--dark-shadow);
+}
+
+/*
+ * ===================
+ * TOKENS FOR METHOD 2
+ * ===================
+*/
+
+/* Override Ionic's default colors for light mode */
+body {
+  --ion-background-color: var(--light-background);
+  --ion-text-color: var(--light-text-primary);
+
+  --ion-color-primary: var(--brand-primary);
+  --ion-color-secondary: var(--brand-secondary);
+  --ion-color-tertiary: var(--brand-tertiary);
+  --ion-color-success: var(--brand-success);
+  --ion-color-warning: var(--brand-warning);
+  --ion-color-danger: var(--brand-danger);
+
+  --ion-item-background: var(--light-surface);
+  --ion-card-background: var(--light-surface);
+  --ion-toolbar-background: var(--light-surface-variant);
+  --ion-border-color: var(--light-border);
+}
+
+/* Dark mode overrides for Ionic */
+body.dark {
+  --ion-background-color: var(--dark-background);
+  --ion-text-color: var(--dark-text-primary);
+
+  --ion-item-background: var(--dark-surface);
+  --ion-card-background: var(--dark-surface);
+  --ion-toolbar-background: var(--dark-surface-variant);
+  --ion-border-color: var(--dark-border);
+}
